@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- ... (your header content) ... -->
+    </header>
+    
+    <div class="container">
+        <h2>Login</h2>
+        <p>Select your role:</p>
+
+        <!-- Login Form -->
+        <form id="loginForm" action="login_inside.html" method="get">
+            <label for="role">
+                <input type="radio" id="citizen" name="role" value="citizen" required>
+                Citizen
+            </label>
+            <label for="role">
+                <input type="radio" id="govOfficer" name="role" value="gov_officer" required>
+                Government Officer
+            </label>
+
+            <!-- Government Officer Options -->
+            <div id="govOfficerOptions" style="display: none;">
+                <label for="govRole">
+                    <input type="radio" id="supervisor" name="govRole" value="supervisor">
+                    Supervisor
+                </label>
+                <label for="govRole">
+                    <input type="radio" id="firstResponder" name="govRole" value="first_responder">
+                    First Responder
+                </label>
+            </div>
+
+            <!-- Supervisor Sub-Section -->
+            <div id="supervisorSection" style="display: none;">
+                <p>Supervisor-specific content goes here.</p>
+            </div>
+
+            <!-- First Responder Sub-Section -->
+            <div id="firstResponderSection" style="display: none;">
+                <p>First Responder-specific content goes here.</p>
+            </div>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script src="scriptlogin.js"></script>
+</body>
+</html>

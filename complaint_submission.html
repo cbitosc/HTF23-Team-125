@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Submission</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Complaint Submission</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Submit Your Complaint</h2>
+        <p>Complete the form to submit your complaint:</p>
+
+        <!-- Complaint submission form -->
+        <form id="complaintSubmissionForm" action="complaint_success.html" method="get">
+            <!-- Complaint details -->
+            <div class="form-group">
+                <label for="complaint">Complaint:</label>
+                <textarea id="complaint" name="complaint" rows="4" required></textarea>
+            </div>
+
+            <!-- Image upload -->
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <input type="submit" value="Submit Complaint">
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
