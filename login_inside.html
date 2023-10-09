@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- ... (your header content) ... -->
+    </header>
+    
+    <div class="container">
+        <h2>Login</h2>
+        
+        <!-- Login Form -->
+        <form id="loginForm" action="" method="get" onsubmit="return redirectToPage();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="radio" id="citizen" name="role" value="citizen" required>
+            <label for="citizen">Citizen</label>
+            
+            <input type="radio" id="gov_officer" name="role" value="gov_officer" required>
+            <label for="gov_officer">Government Officer</label>
+
+            <!-- Category selection -->
+            <div class="form-group">
+                <label for="category">Select a Category:</label>
+                <select id="category" name="category" required>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Water">Water</option>
+                    <option value="Roads">Roads</option>
+                    <option value="Disaster Response">Disaster Response</option>
+                    <option value="HealthSector">Health Sector</option>
+                    <option value="EducationSector">Education Sector</option>
+                </select>
+            </div>
+
+            <!-- Add a hidden input field to store the selected role -->
+            <input type="hidden" id="selectedRole" name="selectedRole" value="">
+            
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            var citizenRadio = document.getElementById("citizen");
+            var govOfficerRadio = document.getElementById("gov_officer");
+            
+            if (citizenRadio && citizenRadio.checked) {
+                window.location.href = "complaint_submission.html"; // Redirect to citizen page
+            } else if (govOfficerRadio && govOfficerRadio.checked) {
+                window.location.href = "view_complaints.html"; // Redirect to government officer page
+            }
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

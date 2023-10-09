@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Registration</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Citizen Registration</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Fill in Your Details</h2>
+        <p>Complete the registration form to proceed:</p>
+
+        <!-- Citizen details form -->
+        <form id="citizenRegistrationForm" action="citizen_registration_success.html" method="get">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Aadhaar Card Number -->
+            <div class="form-group">
+                <label for="aadhaar">Aadhaar Card Number:</label>
+                <input type="text" id="aadhaar" name="aadhaar" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

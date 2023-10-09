@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Officer Registration</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Government Officer Registration</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Choose Your Role</h2>
+        <p>Select one of the options below to specify your role:</p>
+
+        <!-- Radio buttons for Supervisor and First Responder options -->
+        <form id="governmentOfficerRegistrationForm" method="get">
+            <label for="supervisor">
+                <input type="radio" id="supervisor" name="governmentRole" value="Supervisor" required>
+                Supervisor
+            </label>
+            <label for="firstResponder">
+                <input type="radio" id="firstResponder" name="governmentRole" value="First Responder" required>
+                First Responder
+            </label>
+            <input type="submit" value="Proceed">
+        </form>
+    </div>
+
+    <script src="scriptsf.js"></script>
+</body>
+</html>
